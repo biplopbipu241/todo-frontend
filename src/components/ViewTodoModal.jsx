@@ -16,7 +16,7 @@ const ViewTodoModal = ({ todo, onClose, fetchTodos }) => {
   const handleSave = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:10/todos/${todo._id}`, { title, description, completed });
+      await axios.put(`https://todo-api-7888.onrender.com/todos/${todo._id}`, { title, description, completed });
       onClose();
       fetchTodos();
     } catch (error) {
